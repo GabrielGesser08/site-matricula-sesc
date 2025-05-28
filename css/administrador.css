@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container{
+    align-items: center;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div h1{
+    margin-top: 5rem;
+}
+main figure{
+    justify-content: center;
+    display: flex;
+    background-color: transparent;
+}
+
+nav{
+    justify-content: center;
+    display: block;
+}
+
+nav .quadrado{
+    display: block;
+    justify-content: center;
+    width: 68rem;
+    height: 30rem;
+    background-color: #c9c9c9;
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+
+.botoes{
+    display: flex;
+    margin-top: 3.5rem;
+}
+
+a{
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    padding-inline: 5rem;
+}
+
+button{
+    cursor: pointer;
+    padding-inline: 9.9rem;
+    padding-block: 12px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+input{
+    display: block;
+    margin-left: 5rem;
+    margin-block: 3rem;
+    padding-block: 15px;
+    padding-inline-end: 20cm;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.campos{
+    display: block;
+    margin-top: 3rem;
+}
+
+h2{
+    margin-top: 3rem;
+    font-size: 30px;   
+}
+
+.title{
+    display: flex;
+    justify-content: start;
+    margin-left: 5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.tamanhoImg{
+    width: 100vw;
+    height: 23vh;
+}

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div h1{
+    margin-top: 5rem;
+}
+main figure{
+    justify-content: center;
+    display: flex;
+}
+
+.alterarTamanho{
+    width: 70rem;
+}
+
+section{
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+}
+
+a{
+    padding-inline: 14rem;
+}
+
+button{
+    cursor: pointer;
+    padding-inline: 8rem;
+    padding-block: 1rem;
+    border: none;
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}

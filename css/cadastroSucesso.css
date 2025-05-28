@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div h1{
+    margin-top: 5rem;
+}
+
+main{
+    background-color:rgb(137, 255, 153);
+    display: flex;
+    justify-content: center;
+    width: 60rem;
+    height: 6rem;
+    border-radius: 1.2rem;
+    font-size: larger;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: end;
+    margin-top: 25rem;
+}
+
+.tamanhoImg{
+    width: 100vw;
+    height: 23vh;
+}

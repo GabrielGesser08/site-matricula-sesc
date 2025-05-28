@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container{
+    align-items: center;
+}
+
+div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div h1{
+    margin-top: 5rem;
+}
+main figure{
+    justify-content: center;
+    display: flex;
+    background-color: transparent;
+}
+
+nav{
+    justify-content: center;
+    display: block;
+}
+
+nav .quadrado{
+    display: block;
+    justify-content: center;
+    width: 40rem;
+    height: 28rem;
+    background-color: #c9c9c9;
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.botao{
+    display: flex;
+    margin-top: 3rem;
+}
+
+
+button{
+    cursor: pointer;
+    padding-inline: 9.9rem;
+    padding-block: 12px;
+    border: none;
+    background-color: #c9c9c9;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+h2{
+
+    font-size: 30px;   
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.tamanhoImg{
+    width: 100vw;
+    height: 23vh;
+}
