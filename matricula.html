@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Usuário</title>
+    <link rel="stylesheet" href="./assets/css/padraoMatrícula.css" />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <h2>Área do usuário</h2>
+      <div class="separa"></div>
+      <img src="./assets/img/logoSescSenac.png" alt="logoSescSenac" />
+    </div>
+
+    <section>
+      <div class="quadrado">
+        <h2 class="login">Matricula</h2>
+        <!--Formuçários-->
+
+        <div class="form-container">
+          <div class="form-group">
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Nome completo:"
+            />
+
+            <input type="number" id="cpf" name="cpf" placeholder="CPF:" />
+
+            <input
+              type="number"
+              id="rg"
+              name="rg"
+              placeholder="N° do rg ou certidão de nascimento:"
+            />
+
+            <input
+              type="number"
+              id="sus"
+              name="sus"
+              placeholder="N° do cartão do sus (opcional):"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="date"
+              id="data-nascimento"
+              name="data-nascimento"
+              placeholder="Data de nascimento:"
+            />
+
+            <input type="text" id="sexo" name="sexo" placeholder="Sexo:" />
+
+            <input
+              type="text"
+              id="nacionalidade"
+              name="nacionalidade"
+              placeholder="Nacionalidade:"
+            />
+          </div>
+        </div>
+
+        <!--Botões-->
+
+        <nav>
+          <a href="/matricula.html"><button>Continuar</button></a>
+          <a href="/index.html"><button>Cancelar</button></a>
+        </nav>
+
+        <h3>
+          <a href="index.html"
+            >Não tem uma conta? <br />
+            Cadastre-se já.</a
+          >
+        </h3>
+      </div>
+    </section>
+
+    <footer>
+      <div class="rodape">
+        <img
+          class="alterarTamanhoImg"
+          src="./assets/img/rodapé-removebg-preview.png"
+          alt=""
+        />
+      </div>
+    </footer>
+  </body>
+</html>

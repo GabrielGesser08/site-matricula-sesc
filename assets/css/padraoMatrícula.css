@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  background-color: none;
+  margin-top: 1rem;
+}
+
+.separa {
+  margin-inline: 8.5rem;
+}
+
+div h2 {
+  align-items: center;
+  display: inline;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+img {
+  width: 150px;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.alterarTamanhoImg {
+  width: 100%;
+  height: 10rem;
+}
+
+section {
+  margin-top: 2rem;
+  justify-content: center;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+nav button {
+  margin-inline: 2.1rem;
+  padding: 4.5px;
+  padding-inline: 5rem;
+  border: none;
+  box-shadow: 2px 2px rgb(191, 191, 191);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+  justify-content: center;
+  display: flex;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.quadrado {
+  align-items: center;
+  display: block;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  width: 38rem;
+  height: 21rem;
+  background-color: #e0e0e0;
+}
+
+.quadrado h3 a {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: gold;
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  margin-inline: 10px;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 48%; /* Ajuste conforme necessário */
+}
+
+input {
+  margin-left: 1.5rem;
+  padding: 8px;
+  width: 15rem;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(191, 191, 191);
+}
+
+.login {
+  margin: 2rem;
+}
