@@ -9,11 +9,18 @@
   display: flex;
   justify-content: center;
   background-color: none;
-  margin-top: 1rem;
+  margin-top: 8rem;
 }
 
+
+
 .separa {
-  margin-inline: 8.5rem;
+  margin-inline: 18rem;
+}
+
+.login{
+  margin-top: 3.5rem;
+  margin-left: 2rem;
 }
 
 div h2 {
@@ -25,7 +32,7 @@ div h2 {
 }
 
 img {
-  width: 150px;
+  width: 200px;
 }
 
 figure {
@@ -36,7 +43,7 @@ figure {
 .rodape {
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
+  margin-top: 4rem;
 }
 
 .alterarTamanhoImg {
@@ -58,8 +65,8 @@ nav {
 
 nav button {
   margin-inline: 2.1rem;
-  padding: 4.5px;
-  padding-inline: 5rem;
+  padding: 12px;
+  padding-inline: 10rem;
   border: none;
   box-shadow: 2px 2px rgb(191, 191, 191);
   background-color: #fff;
@@ -83,21 +90,12 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 1rem;
-  width: 38rem;
-  height: 21rem;
+  width: 58rem;
+  height: 30rem;
   background-color: #e0e0e0;
 }
 
-.quadrado h3 a {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  margin-top: 1.5rem;
-  color: gold;
-  font-size: 14px;
-  text-decoration: none;
-  text-shadow: 1px 1px 1px black;
-}
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -112,14 +110,11 @@ a {
 
 input {
   margin-left: 1.5rem;
-  padding: 8px;
-  width: 15rem;
-  margin-bottom: 10px;
+  padding: 16px;
+  width: 25rem;
+  margin-bottom: 20px;
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px rgb(191, 191, 191);
 }
 
-.login {
-  margin: 2rem;
-}

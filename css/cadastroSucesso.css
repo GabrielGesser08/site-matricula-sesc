@@ -1,41 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-div{
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-div h1{
-    margin-top: 5rem;
+/* Header */
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
 }
 
-main{
+header h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+/* Mensagem Central */
+main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
 }
 
-.container{
-    width: 40rem;
-    height: 90px;
+.container {
+    width: 50rem;
+    height:100px;
     background-color: #19D400;
     display: flex;
     justify-content: center;
-    border-radius: 15px;
     align-items: center;
-    
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(34, 33, 33, 0.2);
 }
 
+.container h1 {
+    color: #1a0c0c;
+    font-size: 1.5rem;
+}
+
+/* Botão */
+.botao {
+    margin-top: 4rem;
+    padding: 0.7rem 6rem;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border: 2px solid gray;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+/* Rodapé */
 footer {
-    display: flex;
-    justify-content: end;
-    margin-top: 25rem;
+    width: 100%;
+    margin-top: 2rem;
 }
 
-.tamanhoImg{
-    width: 100vw;
-    height: 23vh;
+.tamanhoImg {
+    width: 119rem;
+    height: 15rem;
+    display: block;
 }

@@ -32,26 +32,26 @@ nav{
     display: block;
 }
 
-nav .quadrado{
-    display: block;
+.quadrado{
+    text-align: center;
     justify-content: center;
+    align-items: center;
     width: 40rem;
     height: 28rem;
     background-color: #c9c9c9;
-    margin-top: 2rem;
+    margin-top: 1rem;
     border-radius: 15px;
 }
 
 .texto{
     display: flex;
     justify-content: center;
-
 }
 
 
 .botao{
     display: flex;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 
@@ -73,13 +73,13 @@ h2{
 .title{
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 
 footer {
     display: flex;
     justify-content: center;
-    margin-top: 6rem;
 }
 
 .tamanhoImg{
