@@ -1,3 +1,5 @@
+<?php include("conexao.php"); ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -19,7 +21,7 @@
 
             <div class="botoes">
               <a href="./pages/login.html" class="btn">Matricule-se</a>
-              <a href="./pages/LoginAdministrador.html" class="btn">Administrador</a>
+              <a href="./pages/LoginAdministrador.php" class="btn">Administrador</a>
           </div>
         </main>
 

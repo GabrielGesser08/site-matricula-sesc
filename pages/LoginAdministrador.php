@@ -1,5 +1,36 @@
+<?php
+include("../conexao.php");
+
+session_start();
+$erro = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+
+    $sql = "SELECT * FROM administradores WHERE usuario = ?";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("s", $usuario);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows == 1) {
+        $admin = $resultado->fetch_assoc();
+        if (password_verify($senha, $admin['senha'])) {
+            $_SESSION['admin'] = $admin['usuario'];
+            header("Location: painel_administrador.php");
+            exit();
+        } else {
+            $erro = "Senha incorreta.";
+        }
+    } else {
+        $erro = "Usuário não encontrado.";
+    }
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +58,7 @@
             </div>
             <div class="botoes">
                 <a href="./PgInicialAdministrador.html"><button>Continuar</button></a>
-                <a href="../index.html"><button>Cancelar</button></a>
+                <a href="../index.php"><button>Cancelar</button></a>
             </div>
             
         </div>
