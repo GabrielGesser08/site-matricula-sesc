@@ -1,117 +1,137 @@
-*{
+/* === Reset e base === */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-
+    background-color: white;
+    min-height: 100vh;
 }
 
-.container{
+.container {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
-div{
-    display: flex;
-    justify-content: space-evenly;
+nav {
+    width: 100%;
+    max-width: 500px;
 }
 
-div h1{
-    margin-top: 5rem;
-}
-main figure{
-    justify-content: center;
-    display: flex;
-    background-color: transparent;
-}
-
-nav{
-    justify-content: center;
-    display: block;
-}
-
-nav .quadrado{
-    display: block;
-    justify-content: center;
-    width: 68rem;
-    height: 30rem;
+.quadrado {
     background-color: #c9c9c9;
-    margin-top: 3rem;
     border-radius: 15px;
+    padding: 30px 20px;
+    width: 100%;
 }
 
-
-.botoes{
+.title {
     display: flex;
-    margin-top: 3.5rem;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-a{
+h2 {
+    font-size: 2rem;
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.botoes a {
+    background-color: white;
+    padding: 12px 40px;
+    border-radius: 10px;
     text-decoration: none;
-    justify-content: center;
-    display: flex;
-    padding-inline: 5rem;
+    color: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 
-button{
-    cursor: pointer;
-    padding-inline: 9.9rem;
-    padding-block: 12px;
-    border: none;
-    background-color: #ffffff;
-    border-radius: 10px;
-    font-size: 16px;
+.botoes a:hover {
+    background-color: #f0f0f0;
 }
 
-input{
-    display: block;
-    margin-left: 5rem;
-    margin-block: 3rem;
-    padding-block: 15px;
-    padding-inline-end: 20cm;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-}
-
-.campos{
-    display: block;
-    margin-top: 3rem;
-}
-
-h2{
-    margin-top: 3rem;
-    font-size: 30px;   
-}
-
-.title{
-    display: flex;
-    justify-content: start;
-    margin-left: 5rem;
-}
-
-.accont{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+.accont {
+    margin-top: 20px;
     text-align: center;
 }
 
-a{
-    text-decoration: none;
+.accont a {
     color: gold;
     text-shadow: 1px 1px black;
+    text-decoration: none;
 }
 
 footer {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
 }
 
-.tamanhoImg{
-    width: 100vw;
-    height: 23vh;
+.tamanhoImg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
+
+/* === Responsivo Mobile === */
+@media (max-width: 600px) {
+    .quadrado {
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .botoes a {
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .tamanhoImg {
+        height: 20vh;
+    }
+}
+@media (max-width: 600px) {
+    .quadrado {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+

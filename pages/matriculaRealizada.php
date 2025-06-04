@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,7 +33,7 @@
             </div>
         </div>
         <div class="botao">
-                <a href="../index.html"><button>Continuar</button></a>
+                <a href="../index.php"><button>Continuar</button></a>
             </div>
     </nav>
     </div>

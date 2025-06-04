@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +20,7 @@
         <div class="container">
             <h1>Cadastrado com sucesso!</h1>
         </div>
-        <a class="botao" href="../pages/matricula.html">Continuar</a>
+        <a class="botao" href="../pages/matricula.php">Continuar</a>
     </main>
 
     <footer>

@@ -9,22 +9,32 @@ body {
 }
 
 header  img{
-  margin-left: 16cm;
-  margin-top: 7rem;
+  justify-content: center;
+  align-items: center;
   width: 10rem;
   height: auto;
 }
 
 .container {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
   display: flex;
+  align-items: center;
+}
+
+.estrutura{
   gap: 50px;
-  position: absolute;
-  top: 25%;
-  left: 40%;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .roleta-area {
   text-align: center;
+  align-items: center;
 }
 
 .roleta {
@@ -35,6 +45,9 @@ header  img{
   position: relative;
   overflow: hidden;
   transition: transform 5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .botao {

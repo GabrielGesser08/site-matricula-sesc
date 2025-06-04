@@ -1,3 +1,4 @@
+/* === RESET === */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* === ESTILO GERAL === */
 body {
     background-color: white;
     min-height: 100vh;
@@ -18,29 +20,36 @@ body {
 .container {
     width: 95%;
     max-width: 1600px;
-    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
 }
 
+/* === HEADER === */
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 header h2 {
     font-style: italic;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 3.5rem;
 }
 
 .logo {
     width: 300px;
+    max-width: 80vw;
+    display: grid;
+    
 }
 
+/* === MAIN === */
 main {
     display: flex;
     flex-direction: column;
@@ -54,9 +63,12 @@ main {
     border-radius: 20px;
 }
 
+/* === BOTÕES === */
 .botoes {
     display: flex;
     gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -69,5 +81,71 @@ main {
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     text-decoration: none;
     color: #000;
+    transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+    background-color: #c0c0c0;
+}
+
+/* ========================== */
+/* === RESPONSIVO MOBILE ==== */
+/* ========================== */
+
+@media (max-width: 1024px) {
+    header h2 {
+        font-size: 32px;
+    }
+
+    .botoes {
+        gap: 50px;
+    }
+
+    .btn {
+        padding: 20px 80px;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+  
+
+    header h2 {
+        font-size: 28px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .banner {
+        width: 90%;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .btn {
+        width: 90%;
+        padding: 18px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 24px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .btn {
+        width: 95%;
+        padding: 16px;
+        font-size: 1.4rem;
+    }
+}

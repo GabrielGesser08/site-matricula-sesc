@@ -1,3 +1,18 @@
+<?php 
+
+include_once('./php/data/config.php');
+
+// REMOVER DEPOIS O CODIGO ABAIXO //
+session_start();
+$logado = $_SESSION['logado'] ?? FALSE;
+
+$IdUser = $_SESSION['IdUser'] ?? NULL;
+
+
+//********************************//
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -18,8 +33,8 @@
             <img src="./img/imgMatricula.jpg" alt="Banner Ensino Médio" class="banner">
 
             <div class="botoes">
-              <a href="./pages/login.html" class="btn">Matricule-se</a>
-              <a href="./pages/LoginAdministrador.html" class="btn">Administrador</a>
+              <a href="./pages/login.php" class="btn">Matricule-se</a>
+              <a href="./pages/LoginAdministrador.php" class="btn">Administrador</a>
           </div>
         </main>
 

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,8 +69,8 @@
         <!--Botões-->
 
         <nav>
-          <a href="./matriculaRealizada.html"><button>Continuar</button></a>
-          <a href="./login.html"><button>Cancelar</button></a>
+          <a href="./matriculaRealizada.php"><button>Continuar</button></a>
+          <a href="./login.php"><button>Cancelar</button></a>
         </nav>
 
       </div>

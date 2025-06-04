@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,8 +32,8 @@
                 <input type="cpf" placeholder="CPF:">
             </div>
             <div class="botoes">
-                <a href="./cadastroSucesso.html"><button>Continuar</button></a>
-                <a href="./login.html"><button>Cancelar</button></a>
+                <a href="./cadastroSucesso.php"><button>Continuar</button></a>
+                <a href="./login.php"><button>Cancelar</button></a>
             </div>
         </div>
     </nav>

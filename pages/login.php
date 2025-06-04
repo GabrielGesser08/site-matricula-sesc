@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -28,11 +30,11 @@
                 <input type="password" placeholder="Senha:">
             </div>
             <div class="botoes">
-                <a href="./cadastroSucesso.html"><button>Continuar</button></a>
-                <a href="../index.html"><button>Cancelar</button></a>
+                <a href="./matricula.php"><button>Continuar</button></a>
+                <a href="../index.php"><button>Cancelar</button></a>
             </div>
             <div class="accont">
-                <a href="./cadastro.html">Não tem uma conta? <br> Cadastre-se já.</a>
+                <a href="./cadastro.php">Não tem uma conta? <br> Cadastre-se já.</a>
             </div>
         </div>
     </nav>

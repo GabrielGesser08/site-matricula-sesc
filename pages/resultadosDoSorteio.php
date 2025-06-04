@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +29,7 @@
 
             <div class="footer">
                 <p>Total alunos: 40</p>
-                <a href="./PgInicialAdministrador.html"><button class="voltar">Continuar</button></a>
+                <a href="./PgInicialAdministrador.php"><button class="voltar">Continuar</button></a>
             </div>
         </main>
     </div>
