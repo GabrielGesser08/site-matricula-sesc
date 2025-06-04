@@ -20,7 +20,7 @@
             <img src="./img/imgMatricula.jpg" alt="Banner Ensino Médio" class="banner">
 
             <div class="botoes">
-              <a href="./pages/login.html" class="btn">Matricule-se</a>
+              <a href="./pages/login.php" class="btn">Matricule-se</a>
               <a href="./pages/LoginAdministrador.php" class="btn">Administrador</a>
           </div>
         </main>

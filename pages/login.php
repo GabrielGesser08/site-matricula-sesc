@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Usuário</title>
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>Login de Usuário</title>
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
@@ -20,21 +20,24 @@
         <nav>
         <div class="quadrado">
             <div class="title">
-                <h2>Cadastro</h2>
+                <h2>Login</h2>
             </div>
                 
             <div class="campos">
                 <input type="text" placeholder="Email:">
                 <input type="password" placeholder="Senha:">
-                <input type="password" placeholder="Confirmar senha:">
-                <input type="cpf" placeholder="CPF:">
             </div>
             <div class="botoes">
-                <a href="./cadastroSucesso.html"><button>Continuar</button></a>
-                <a href="./login.html"><button>Cancelar</button></a>
+                <a href="./cadastroSucesso.php"><button>Continuar</button></a>
+                <a href="../index.php"><button>Cancelar</button></a>
+            </div>
+            <div class="accont">
+                <a href="./cadastro.php">Não tem uma conta? <br> Cadastre-se já.</a>
             </div>
         </div>
     </nav>
+
+
     </div>
     <footer>
         <figure>

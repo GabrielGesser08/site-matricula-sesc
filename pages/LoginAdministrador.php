@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" placeholder="Senha:">
             </div>
             <div class="botoes">
-                <a href="./PgInicialAdministrador.html"><button>Continuar</button></a>
+                <a href="./PgInicialAdministrador.php"><button>Continuar</button></a>
                 <a href="../index.php"><button>Cancelar</button></a>
             </div>
             
