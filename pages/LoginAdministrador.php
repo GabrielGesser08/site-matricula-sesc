@@ -1,7 +1,40 @@
+<<<<<<< HEAD
 
+=======
+<?php
+include("../conexao.php");
+
+session_start();
+$erro = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senha'];
+
+    $sql = "SELECT * FROM administradores WHERE usuario = ?";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("s", $usuario);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows == 1) {
+        $admin = $resultado->fetch_assoc();
+        if (password_verify($senha, $admin['senha'])) {
+            $_SESSION['admin'] = $admin['usuario'];
+            header("Location: painel_administrador.php");
+            exit();
+        } else {
+            $erro = "Senha incorreta.";
+        }
+    } else {
+        $erro = "Usuário não encontrado.";
+    }
+}
+?>
+>>>>>>> 9495b1a75d86f3c1b4ed49c5866790fb009c2844
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

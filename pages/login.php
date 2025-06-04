@@ -30,7 +30,11 @@
                 <input type="password" placeholder="Senha:">
             </div>
             <div class="botoes">
+<<<<<<< HEAD
                 <a href="./matricula.php"><button>Continuar</button></a>
+=======
+                <a href="./cadastroSucesso.php"><button>Continuar</button></a>
+>>>>>>> 9495b1a75d86f3c1b4ed49c5866790fb009c2844
                 <a href="../index.php"><button>Cancelar</button></a>
             </div>
             <div class="accont">
