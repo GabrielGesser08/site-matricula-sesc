@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 
 include_once('./php/data/config.php');
@@ -13,9 +12,6 @@ $IdUser = $_SESSION['IdUser'] ?? NULL;
 //********************************//
 
 ?>
-=======
-<?php include("conexao.php"); ?>
->>>>>>> 9495b1a75d86f3c1b4ed49c5866790fb009c2844
 
 <!DOCTYPE html>
 <html lang="pt-br">
