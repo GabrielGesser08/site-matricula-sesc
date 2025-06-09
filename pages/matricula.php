@@ -1,89 +1,96 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  include("./php/data/config.php");
+
+  // Pegando os dados do formulário
+  $nome_completo = $_POST['nome_completo'];
+  $cpf = $_POST['cpf'];
+  $rg = $_POST['rg'];
+  $sus = $_POST['sus'];
+  $data_nascimento = $_POST['data_nascimento'];
+  $sexo = $_POST['sexo'];
+  $nacionalidade = $_POST['nacionalidade'];
+
+  // Usando prepared statement (segurança)
+  $sql = "INSERT INTO matriculas (nome_completo, cpf, rg, sus, data_nascimento, sexo, nacionalidade)
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+  $stmt = $conn->prepare($sql);
+  if ($stmt) {
+    $stmt->bind_param("sssssss", $nome_completo, $cpf, $rg, $sus, $data_nascimento, $sexo, $nacionalidade);
+
+    if ($stmt->execute()) {
+      header("Location: matriculaRealizada.php");
+      exit();
+    } else {
+      echo "Erro ao salvar: " . $stmt->error;
+    }
+
+    $stmt->close();
+  } else {
+    echo "Erro na preparação da query: " . $conn->error;
+  }
+
+  $conn->close();
+}
+?>
 
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Área do Usuário</title>
-    <link rel="stylesheet" href="../css/matricula.css" />
-  </head>
-  <body>
-    <div class="cabecalho">
-      <h2>Área do usuário</h2>
-      <div class="separa"></div>
-      <img src="../img/logoSescSenac.png" alt="logoSescSenac" />
-    </div>
+<html lang="pt-br">
 
-    <section>
-      <div class="quadrado">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área do Usuário</title>
+  <link rel="stylesheet" href="../css/matricula.css" />
+</head>
 
-        <h3 class="login">Matricula</h3>
-        <!--Formuçários-->
+<body>
+  <div class="cabecalho">
+    <h2>Área do usuário</h2>
+    <div class="separa"></div>
+    <img src="../img/logoSescSenac.png" alt="logoSescSenac" />
+  </div>
 
+  <section>
+    <div class="quadrado">
+      <h3 class="login">Matrícula</h3>
+
+      <form action="../php/salvarMatricula.php" method="POST">
         <div class="form-container">
           <div class="form-group">
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              placeholder="Nome completo:"
-            />
-
-            <input type="number" id="cpf" name="cpf" placeholder="CPF:" />
-
-            <input
-              type="number"
-              id="rg"
-              name="rg"
-              placeholder="N° do rg ou certidão de nascimento:"
-            />
-
-            <input
-              type="number"
-              id="sus"
-              name="sus"
-              placeholder="N° do cartão do sus (opcional):"
-            />
+            <input type="text" name="nome_completo" placeholder="Nome completo:" required>
+            <input type="text" name="cpf" placeholder="CPF:" required>
+            <input type="text" name="rg" placeholder="N° do RG ou certidão de nascimento:">
+            <input type="text" name="sus" placeholder="N° do cartão do SUS (opcional):">
           </div>
 
           <div class="form-group">
-            <input
-              type="date"
-              id="data-nascimento"
-              name="data-nascimento"
-              placeholder="Data de nascimento:"
-            />
-
-            <input type="text" id="sexo" name="sexo" placeholder="Sexo:" />
-
-            <input
-              type="text"
-              id="nacionalidade"
-              name="nacionalidade"
-              placeholder="Nacionalidade:"
-            />
+            <input type="date" name="data_nascimento" required>
+            <input type="text" name="sexo" placeholder="Sexo:" required>
+            <input type="text" name="nacionalidade" placeholder="Nacionalidade:" required>
           </div>
         </div>
 
-        <!--Botões-->
-
         <nav>
-          <a href="./matriculaRealizada.php"><button>Continuar</button></a>
-          <a href="./login.php"><button>Cancelar</button></a>
+          <button type="submit">Continuar</button>
+          <a href="./login.php"><button type="button">Cancelar</button></a>
         </nav>
+      </form>
 
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="rodape">
-        <img
-          class="alterarTamanhoImg"
-          src="../img/footer.png"
-          alt=""
-        />
-      </div>
-    </footer>
-  </body>
+  <footer>
+    <div class="rodape">
+      <img class="alterarTamanhoImg" src="../img/footer.png" alt="" />
+    </div>
+  </footer>
+</body>
+
 </html>

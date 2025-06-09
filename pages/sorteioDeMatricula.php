@@ -35,7 +35,7 @@
                 <br>
                 <strong>Alunos selecionados: 40</strong>
                 <br><br>
-                <button>Continuar</button>
+                <a href="./resultadosDoSorteio.php"><button>Continuar</button></a>
             </div>
         </div>
 

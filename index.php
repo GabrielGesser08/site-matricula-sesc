@@ -1,17 +1,4 @@
-<?php 
 
-include_once('./php/data/config.php');
-
-// REMOVER DEPOIS O CODIGO ABAIXO //
-session_start();
-$logado = $_SESSION['logado'] ?? FALSE;
-
-$IdUser = $_SESSION['IdUser'] ?? NULL;
-
-
-//********************************//
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">

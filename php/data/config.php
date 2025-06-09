@@ -1,18 +1,13 @@
 <?php
-$host = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "site_matricula_sesc";
+$dbHost = "localhost";
+$dbNome = "site_matricula_sesc";
+$dbUser = "root";
+$dbSenha = "";
 
-$conexao = new mysqli($host, $usuario, $senha, $banco);
-
-if ($conexao->connect_error) {
-    die("Erro na conexão: " . $conexao->connect_error);
+try {
+    $conexao = new PDO("mysql:host=$dbHost; dbname=$dbNome; charset=utf8", $dbUser, $dbSenha);
+} catch (PDOException $erro) {
+    echo 'Erro ao conectar com o banco de dados: ' . $erro->getMessage();
 }
 
-
-
-
-define('BASE_URL', 'http://172.17.34.253:1200/phpmyadmin/index.php?route=/database/structure&db=site_matricula_sesc');
-// define('BASE_URL', 'https://caioba.pr.senac.br/projetos/202300005/Grupo02');
-?>
+define('BASE_URL', 'http://172.17.34.253:1200/projetos/202300005/3Ano_ProjetoSoteador/Grupo03/');

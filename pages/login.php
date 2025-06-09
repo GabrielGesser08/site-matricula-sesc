@@ -1,4 +1,39 @@
+<?php
+// CONEXÃO
+$host = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "site_matricula_sesc";
 
+$conexao = new mysqli($host, $usuario, $senha, $banco);
+
+if ($conexao->connect_error) {
+    die("Erro na conexão: " . $conexao->connect_error);
+}
+
+$msg = "";
+
+// LOGIN
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'] ?? '';
+    $senha = $_POST['senha'] ?? '';
+
+    // Protege contra SQL Injection
+    $email = $conexao->real_escape_string($email);
+    $senha = $conexao->real_escape_string($senha);
+
+    // Verifica no banco
+    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+    $resultado = $conexao->query($sql);
+
+    if ($resultado->num_rows == 1) {
+        header("Location: matricula.php");
+        exit;
+    } else {
+        $msg = "Email ou senha inválidos!";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,9 +75,13 @@
 
     </div>
     <footer>
-        <figure>
-            <img class="tamanhoImg" src="../img/footer.png" alt="">
-        </figure>
+      <div class="rodape">
+        <img
+          class="alterarTamanhoImg"
+          src="../img/footer.png"
+          alt=""
+        />
+      </div>
     </footer>
 </body>
 
