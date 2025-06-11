@@ -1,39 +1,37 @@
 <?php
-// CONEXÃO
-$host = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "site_matricula_sesc";
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$conexao = new mysqli($host, $usuario, $senha, $banco);
-
-if ($conexao->connect_error) {
-    die("Erro na conexão: " . $conexao->connect_error);
-}
-
-$msg = "";
-
-// LOGIN
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'] ?? '';
-    $senha = $_POST['senha'] ?? '';
+    include("./php/data/config.php");
 
-    // Protege contra SQL Injection
-    $email = $conexao->real_escape_string($email);
-    $senha = $conexao->real_escape_string($senha);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
+    $perfil = filter_input(INPUT_POST, 'perfil', FILTER_SANITIZE_STRING);
 
-    // Verifica no banco
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-    $resultado = $conexao->query($sql);
+    $sql = "INSERT INTO usuarios (email, senha, perfil) VALUES (:email, :senha, :perfil)";
 
-    if ($resultado->num_rows == 1) {
-        header("Location: matricula.php");
-        exit;
-    } else {
-        $msg = "Email ou senha inválidos!";
+    try {
+        $stmt = $conexao->prepare($sql);
+
+        // Bind dos parâmetros
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->bindParam(':perfil', $perfil);
+
+        // Executa e redireciona se ok
+        if ($stmt->execute()) {
+            header("Location: salavar_aluno.php");
+            exit();
+        } else {
+            echo "Erro ao salvar.";
+        }
+    } catch (PDOException $e) {
+        echo "Erro na query: " . $e->getMessage();
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,35 +51,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container">
         <nav>
-        <div class="quadrado">
-            <div class="title">
-                <h2>Login</h2>
-            </div>
-                
-            <div class="campos">
-                <input type="text" placeholder="Email:">
-                <input type="password" placeholder="Senha:">
-            </div>
-            <div class="botoes">
-                <a href="./matricula.php"><button>Continuar</button></a>
-                <a href="../index.php"><button>Cancelar</button></a>
-            </div>
-            <div class="accont">
-                <a href="./cadastro.php">Não tem uma conta? <br> Cadastre-se já.</a>
-            </div>
-        </div>
-    </nav>
+            <form  action="../php/salvar_aluno.php" method="POST" class="quadrado">
+                <div class="title">
+                    <h2>Login</h2>
+                </div>
+
+                <div class="campos">
+                    <input type="text" name="email" placeholder="Email:">
+                    <input type="password" name="senha" placeholder="Senha:">
+                </div>
+                <div class="botoes">
+                    <a href="./matricula.php"><button>Continuar</button></a>
+                    <a href="../index.php"><button>Cancelar</button></a>
+                </div>
+                <div class="accont">
+                    <a href="./cadastro.php">Não tem uma conta? <br> Cadastre-se já.</a>
+                </div>
+            </form>
+        </nav>
 
 
     </div>
     <footer>
-      <div class="rodape">
-        <img
-          class="alterarTamanhoImg"
-          src="../img/footer.png"
-          alt=""
-        />
-      </div>
+        <div class="rodape">
+            <img
+                class="alterarTamanhoImg"
+                src="../img/footer.png"
+                alt="" />
+        </div>
     </footer>
 </body>
 

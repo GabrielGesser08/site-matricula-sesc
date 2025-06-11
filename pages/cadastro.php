@@ -20,22 +20,22 @@
 
     <div class="container">
         <nav>
-        <div class="quadrado">
+        <form class="quadrado">
             <div class="title">
                 <h2>Cadastro</h2>
             </div>
                 
             <div class="campos">
-                <input type="text" placeholder="Email:">
-                <input type="password" placeholder="Senha:">
-                <input type="password" placeholder="Confirmar senha:">
-                <input type="cpf" placeholder="CPF:">
+                <input type="text" name="email" placeholder="Email:">
+                <input type="password" name="senha" placeholder="Senha:">
+                <input type="password" name="confirma_senha" placeholder="Confirmar senha:">
+                <input type="cpf" name="cpf" placeholder="CPF:">
             </div>
             <div class="botoes">
                 <a href="./cadastroSucesso.php"><button>Continuar</button></a>
                 <a href="./login.php"><button>Cancelar</button></a>
             </div>
-        </div>
+        </form>
     </nav>
     </div>
     <footer>
