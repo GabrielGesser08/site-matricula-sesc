@@ -1,37 +1,3 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include("./php/data/config.php");
-
-    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-    $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-    $perfil = filter_input(INPUT_POST, 'perfil', FILTER_SANITIZE_STRING);
-
-    $sql = "INSERT INTO usuarios (email, senha, perfil) VALUES (:email, :senha, :perfil)";
-
-    try {
-        $stmt = $conexao->prepare($sql);
-
-        // Bind dos parâmetros
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':senha', $senha);
-        $stmt->bindParam(':perfil', $perfil);
-
-        // Executa e redireciona se ok
-        if ($stmt->execute()) {
-            header("Location: salavar_aluno.php");
-            exit();
-        } else {
-            echo "Erro ao salvar.";
-        }
-    } catch (PDOException $e) {
-        echo "Erro na query: " . $e->getMessage();
-    }
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -51,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container">
         <nav>
-            <form  action="../php/salvar_aluno.php" method="POST" class="quadrado">
+            <form   method="POST" class="quadrado">
                 <div class="title">
                     <h2>Login</h2>
                 </div>
@@ -61,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" name="senha" placeholder="Senha:">
                 </div>
                 <div class="botoes">
-                    <a href="./matricula.php"><button>Continuar</button></a>
-                    <a href="../index.php"><button>Cancelar</button></a>
+                    <a href="./matricula.php">Continuar</a>
+                    <a href="../index.php">Cancelar</a>
                 </div>
                 <div class="accont">
                     <a href="./cadastro.php">Não tem uma conta? <br> Cadastre-se já.</a>

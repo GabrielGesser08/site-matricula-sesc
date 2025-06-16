@@ -16,7 +16,7 @@
             <p>kelly@gmail.com</p>
             <div class="botoes">
             <a href="./listadeespera.php"><button class="button light">Lista de espera</button></a>
-            <a href="./sorteioDeMatricula.php"><button class="button light">Sort. de matrícula</button></a>
+            <a href="./sorteioDeMatricula.php"><button class="button light">Sorteio de matrícula</button></a>
             <a href="./LoginAdministrador.php"><button class="button white">Voltar</button></a>
             </div>
         </div>

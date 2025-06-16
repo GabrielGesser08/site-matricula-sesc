@@ -46,13 +46,15 @@ nav .quadrado{
 .botoes{
     display: flex;
     margin-top: 1.5rem;
+    justify-content: center;
+    gap: 10rem;
 }
 
 a{
     text-decoration: none;
     justify-content: center;
     display: flex;
-    padding-inline: 5rem;
+    
 }
 
 button{

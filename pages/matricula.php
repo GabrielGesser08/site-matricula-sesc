@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" name="nome_completo" placeholder="Nome completo:" required>
             <input type="text" name="cpf" placeholder="CPF:" required>
             <input type="text" name="rg" placeholder="N° do RG ou certidão de nascimento:">
-            <input type="text" name="sus" placeholder="N° do cartão do SUS (opcional):">
+            <input type="text" name="sus" placeholder="N° do cartão do SUS:">
           </div>
 
           <div class="form-group">

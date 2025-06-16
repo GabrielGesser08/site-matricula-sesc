@@ -1,4 +1,10 @@
-
+<?php
+session_start();
+if (!empty($_SESSION['mensagem'])) {
+    echo "<p style='color:red'>" . $_SESSION['mensagem'] . "</p>";
+    unset($_SESSION['mensagem']);
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,31 +18,32 @@
 
 <body>
     <header>
-    <div>
-        <h1>Área do Usuário</h1>
-        <img src="../img/logoSescSenac.png" alt="">
-    </div>
+        <div>
+            <h1>Área do Usuário</h1>
+            <img src="../img/logoSescSenac.png" alt="">
+        </div>
     </header>
 
     <div class="container">
         <nav>
-        <form class="quadrado">
-            <div class="title">
-                <h2>Cadastro</h2>
-            </div>
-                
-            <div class="campos">
-                <input type="text" name="email" placeholder="Email:">
-                <input type="password" name="senha" placeholder="Senha:">
-                <input type="password" name="confirma_senha" placeholder="Confirmar senha:">
-                <input type="cpf" name="cpf" placeholder="CPF:">
-            </div>
-            <div class="botoes">
-                <a href="./cadastroSucesso.php"><button>Continuar</button></a>
-                <a href="./login.php"><button>Cancelar</button></a>
-            </div>
-        </form>
-    </nav>
+            <form class="quadrado" method="POST" action="../php/cadastrarAluno.php">
+                <div class="title">
+                    <h2>Cadastro</h2>
+                </div>
+
+                <div class="campos">
+                    <input type="text" name="email" placeholder="Email:" required>
+                    <input type="password" name="senha" placeholder="Senha:" required>
+                    <input type="password" name="confirma_senha" placeholder="Confirmar senha:" required>
+                    <input type="text" name="cpf" placeholder="CPF:" required>
+                </div>
+
+                <div class="botoes">
+                    <button type="submit">Continuar</button>
+                    <a  href="./login.php"><button type="button">Cancelar</button></a>
+                </div>
+            </form>
+        </nav>
     </div>
     <footer>
         <figure>

@@ -17,7 +17,7 @@
         </header>
 
         <main>
-            <img src="./img/imgMatricula.jpg" alt="Banner Ensino Médio" class="banner">
+            <img src="./img/o.jpg" alt="Banner Ensino Médio" class="banner">
 
             <div class="botoes">
               <a href="./pages/login.php" class="btn">Matricule-se</a>
