@@ -17,7 +17,8 @@
 
         <main>
             <div class="lista">
-                <div class="item">aluno: x <span class="status">- Selecionado</span></div>
+                <div class="item" src="../php/sorteioAluno.php" span class="status">- Selecionado</span></div>
+                
                 <div class="item">aluno: x <span class="status">- Selecionado</span></div>
                 <div class="item">aluno: x <span class="status">- Selecionado</span></div>
                 <div class="item">aluno: x <span class="status">- Selecionado</span></div>

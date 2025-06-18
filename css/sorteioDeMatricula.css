@@ -16,6 +16,7 @@ header  img{
 }
 
 .container {
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -24,8 +25,9 @@ header  img{
 }
 
 .estrutura{
-  gap: 50px;
-  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  display: grid;
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -35,6 +37,20 @@ header  img{
 .roleta-area {
   text-align: center;
   align-items: center;
+}
+
+.btn-voltar{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-decoration: none;
+    padding: 8px 20px;
+}
+
+
+form{
+  display: flex;
+  justify-content: center;
 }
 
 .roleta {
@@ -50,10 +66,6 @@ header  img{
   justify-content: center;
 }
 
-.botao {
-  margin-top: 20px;
-}
-
 button {
   padding: 8px 20px;
   border: none;
@@ -62,28 +74,4 @@ button {
   cursor: pointer;
   box-shadow: 0 3px 5px rgba(0,0,0,0.3);
   transition: 0.3s;
-}
-
-button:hover {
-  background-color: #ddd;
-}
-
-.lista {
-  background: #fafafa;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
-
-.lista div {
-  background: white;
-  margin: 5px 0;
-  padding: 5px 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.status {
-  color: #f5a100;
-  font-weight: bold;
 }

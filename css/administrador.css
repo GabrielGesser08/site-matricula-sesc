@@ -102,3 +102,23 @@ footer {
     width: 100vw;
     height: 23vh;
 }
+
+@media (max-width: 600px) {
+  nav .quadrado {
+    width: 100%;
+    height: auto;
+  }
+  button {
+    padding-inline: 1rem;
+    font-size: 1rem;
+  }
+  input {
+    padding-inline-end: 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a {
+    padding-inline: 1rem;
+  }
+}

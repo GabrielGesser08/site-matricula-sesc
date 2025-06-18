@@ -2,7 +2,7 @@ const canvas = document.getElementById('roleta');
 const ctx = canvas.getContext('2d');
 const numSetores = 8;
 const cores = ["#FF5733", "#FFBD33", "#33FF57", "#33FFF6", "#3375FF", "#8D33FF", "#F333FF", "#FF3380"];
-const textos = ["aluno x", "aluno x", "aluno x", "aluno x", "aluno x", "aluno x", "aluno x", "aluno x"];
+const textos = ["", "", "", "", "", "", "", ""];
 let anguloAtual = 0;
 
 desenharRoleta();

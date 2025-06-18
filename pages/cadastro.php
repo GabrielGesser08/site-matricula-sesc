@@ -1,7 +1,6 @@
 <?php
 session_start();
 if (!empty($_SESSION['mensagem'])) {
-    echo "<p style='color:red'>" . $_SESSION['mensagem'] . "</p>";
     unset($_SESSION['mensagem']);
 }
 ?>
