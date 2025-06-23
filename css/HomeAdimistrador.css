@@ -5,6 +5,19 @@
   font-family: Arial, sans-serif;
 }
 
+.logo{
+  margin-top: -4rem;
+  display: flex;
+  width: 230px;
+}
+
+header{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
 body {
   background-color: #f4f4f4;
 }
@@ -89,13 +102,18 @@ body {
 }
 
 .class-button {
-  background-color: #e8e2e2;
+  background-color: #e4e4e4;
   width: 50rem;
   height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+}
+
+.class-button:hover{
+  background-color: #ccc;
+  transition: 1s;
 }
 
 .class-button p {

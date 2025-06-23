@@ -1,61 +1,61 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.container{
+.container {
     align-items: center;
 }
 
-div{
+/* Mantendo seu padrão */
+div {
     display: flex;
     justify-content: space-evenly;
 }
 
-div h1{
+div h1 {
     margin-top: 5rem;
 }
-main figure{
+
+main figure {
     justify-content: center;
     display: flex;
     background-color: transparent;
 }
 
-nav{
+nav {
     justify-content: center;
     display: block;
 }
 
-nav .quadrado{
+nav .quadrado {
     display: block;
     justify-content: center;
-    width: 68rem;
-    height: 30rem;
+    width: 68rem;  /* ~1088px */
+    height: 30rem; /* 480px */
     background-color: #c9c9c9;
     margin-top: 3rem;
     border-radius: 15px;
 }
 
-
-.botoes{
+.botoes {
     display: flex;
     margin-top: 3.5rem;
 }
 
-a{
+a {
     text-decoration: none;
     justify-content: center;
     display: flex;
     padding-inline: 5rem;
 }
 
-button{
+button {
     cursor: pointer;
     padding-inline: 9.9rem;
     padding-block: 12px;
@@ -65,28 +65,28 @@ button{
     font-size: 16px;
 }
 
-input{
+input {
     display: block;
     margin-left: 5rem;
     margin-block: 3rem;
     padding-block: 15px;
-    padding-inline-end: 20cm;
+    padding-inline-end: 20cm; /* grande demais, ajustaremos abaixo */
     border: none;
     border-radius: 10px;
     font-size: 14px;
 }
 
-.campos{
+.campos {
     display: block;
     margin-top: 3rem;
 }
 
-h2{
+h2 {
     margin-top: 3rem;
-    font-size: 30px;   
+    font-size: 30px;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: start;
     margin-left: 5rem;
@@ -98,27 +98,90 @@ footer {
     margin-top: 4rem;
 }
 
-.tamanhoImg{
+.tamanhoImg {
     width: 100vw;
     height: 23vh;
 }
 
-@media (max-width: 600px) {
-  nav .quadrado {
-    width: 100%;
-    height: auto;
-  }
-  button {
-    padding-inline: 1rem;
-    font-size: 1rem;
-  }
-  input {
-    padding-inline-end: 1rem;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  a {
-    padding-inline: 1rem;
-  }
+/* --- Responsividade adicionada só para telas pequenas --- */
+@media (max-width: 768px) {
+    nav .quadrado {
+        width: 90%;   /* reduz para caber melhor */
+        height: auto; /* altura automática para ajustar conteúdo */
+        margin: 2rem auto 0 auto;
+        padding: 2rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2rem;
+    }
+
+    a {
+        padding-inline: 2rem;
+    }
+
+    button {
+        padding-inline: 4rem;
+        font-size: 15px;
+    }
+
+    input {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 500px;
+        padding-inline-end: 1rem; /* reduzido para telas pequenas */
+        font-size: 14px;
+    }
+
+    .title {
+        margin-left: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div h1 {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    button {
+        padding-inline: 3rem;
+        font-size: 14px;
+    }
+
+    a {
+        padding-inline: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 1.5rem;
+    }
+
+    input {
+        padding-inline-end: 0.8rem;
+        font-size: 13px;
+    }
+
+    nav .quadrado {
+        width: 100%;
+        margin: 1rem auto 0 auto;
+        padding: 1.5rem 1rem;
+        height: auto;
+    }
 }

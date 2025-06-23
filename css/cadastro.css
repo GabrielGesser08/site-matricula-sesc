@@ -1,38 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.container{
+.container {
     align-items: center;
 }
 
-div{
+div {
     display: flex;
     justify-content: space-evenly;
 }
 
-div h1{
+div h1 {
     margin-top: 5rem;
 }
-main figure{
+
+main figure {
     justify-content: center;
     display: flex;
     background-color: transparent;
 }
 
-nav{
+nav {
     justify-content: center;
     display: block;
 }
 
-nav .quadrado{
+nav .quadrado {
     display: block;
     justify-content: center;
     width: 68rem;
@@ -43,21 +44,21 @@ nav .quadrado{
 }
 
 
-.botoes{
+.botoes {
     display: flex;
     margin-top: 1.5rem;
     justify-content: center;
     gap: 10rem;
 }
 
-a{
+a {
     text-decoration: none;
     justify-content: center;
     display: flex;
-    
+
 }
 
-button{
+button {
     cursor: pointer;
     padding-inline: 9.9rem;
     padding-block: 12px;
@@ -67,7 +68,7 @@ button{
     font-size: 16px;
 }
 
-input{
+input {
     display: block;
     margin-left: 5rem;
     margin-block: 1.5rem;
@@ -78,30 +79,30 @@ input{
     font-size: 14px;
 }
 
-.campos{
+.campos {
     display: block;
     margin-top: 3rem;
 }
 
-h2{
+h2 {
     margin-top: 3rem;
-    font-size: 30px;   
+    font-size: 30px;
 }
 
-.title{
+.title {
     display: flex;
     justify-content: start;
     margin-left: 5rem;
 }
 
-.accont{
+.accont {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
     text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: gold;
     text-shadow: 1px 1px black;
@@ -112,7 +113,7 @@ footer {
     justify-content: center;
 }
 
-.tamanhoImg{
+.tamanhoImg {
     width: 100vw;
     height: 23vh;
 }
@@ -123,7 +124,82 @@ footer {
     margin-top: 1rem;
 }
 
-.tamanhoImg{
+.tamanhoImg {
     width: 100vw;
     height: 23vh;
+}
+
+@media (max-width: 1024px) {
+    nav .quadrado {
+        width: 90%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    input {
+        margin-left: 2rem;
+        width: calc(100% - 4rem);
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .title {
+        margin-left: 2rem;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    button {
+        width: 90%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    header div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    div h1 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    header img {
+        width: 180px;
+    }
+
+    .tamanhoImg {
+        height: auto;
+        max-height: 20vh;
+    }
+}
+
+@media (max-width: 480px) {
+    input {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    .title h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+    div h1 {
+        font-size: 1.3rem;
+    }
+
+    header img {
+        width: 160px;
+    }
 }

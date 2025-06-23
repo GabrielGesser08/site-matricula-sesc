@@ -11,6 +11,7 @@
   <body>
     <div class="container">
         <div class="sidebar">
+            
             <img src="../img/fotoPerfil.png" alt="Foto da Kelly" class="profile-pic">
             <h2>Kelly</h2>
             <p>kelly@gmail.com</p>
@@ -22,7 +23,11 @@
         </div>
 
         <div class="main-content">
-            <h1><strong><em>Página do Administrador</em></strong></h1>
+            <header>
+                <h1><strong><em>Página do Administrador</em></strong></h1>
+                <img class="logo" src="../img/logoSescSenac.png" alt="">
+            </header>
+            
             <h2><em>Turma para matrícula</em></h2>
             <div class="class-button">
                 <a class="class-button" href="./turma1ano.php">1° Ano</a>

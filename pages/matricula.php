@@ -7,36 +7,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   include("./php/data/config.php");
 
 
-    // Pegando os dados do formulário
-    $nome_completo = $_POST['nome_completo'];
-    $cpf = $_POST['cpf'];
-    $rg = $_POST['rg'];
-    $sus = $_POST['sus'];
-    $data_nascimento = $_POST['data_nascimento'];
-    $sexo = $_POST['sexo'];
-    $nacionalidade = $_POST['nacionalidade'];
+  // Pegando os dados do formulário
+  $nome_completo = $_POST['nome_completo'];
+  $cpf = $_POST['cpf'];
+  $rg = $_POST['rg'];
+  $sus = $_POST['sus'];
+  $data_nascimento = $_POST['data_nascimento'];
+  $sexo = $_POST['sexo'];
+  $nacionalidade = $_POST['nacionalidade'];
 
-    // Usando prepared statement (segurança)
-    $sql = "INSERT INTO matriculas (nome_completo, cpf, rg, sus, data_nascimento, sexo, nacionalidade)
+  // Usando prepared statement (segurança)
+  $sql = "INSERT INTO matriculas (nome_completo, cpf, rg, sus, data_nascimento, sexo, nacionalidade)
             VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-    $stmt = $conn->prepare($sql);
-    if ($stmt) {
-        $stmt->bind_param("sssssss", $nome_completo, $cpf, $rg, $sus, $data_nascimento, $sexo, $nacionalidade);
+  $stmt = $conn->prepare($sql);
+  if ($stmt) {
+    $stmt->bind_param("sssssss", $nome_completo, $cpf, $rg, $sus, $data_nascimento, $sexo, $nacionalidade);
 
-        if ($stmt->execute()) {
-            header("Location: matriculaRealizada.php");
-            exit();
-        } else {
-            echo "Erro ao salvar: " . $stmt->error;
-        }
-
-        $stmt->close();
+    if ($stmt->execute()) {
+      header("Location: matriculaRealizada.php");
+      exit();
     } else {
-        echo "Erro na preparação da query: " . $conn->error;
+      echo "Erro ao salvar: " . $stmt->error;
     }
 
-    $conn->close();
+    $stmt->close();
+  } else {
+    echo "Erro na preparação da query: " . $conn->error;
+  }
+
+  $conn->close();
 }
 ?>
 
@@ -54,7 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <div class="cabecalho">
     <h2>Área do usuário</h2>
-    <div class="separa"></div>
     <img src="../img/logoSescSenac.png" alt="logoSescSenac" />
   </div>
 

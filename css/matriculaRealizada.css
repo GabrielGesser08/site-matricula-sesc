@@ -1,61 +1,82 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-
+    background-color: #ffffff;
+    /* fundo branco */
 }
 
-.container{
+/* Mantém os elementos centralizados */
+.container {
     align-items: center;
 }
 
-div{
+/* CABEÇALHO */
+header div {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
-div h1{
+header h1 {
     margin-top: 5rem;
+    font-size: 2rem;
 }
-main figure{
-    justify-content: center;
+
+header img {
+    width: 240px;
+    height: auto;
+}
+
+/* TÍTULO */
+.title {
     display: flex;
-    background-color: transparent;
-}
-
-nav{
     justify-content: center;
-    display: block;
+    margin-top: 2rem;
 }
 
-.quadrado{
+.title h2 {
+    font-size: 30px;
+}
+
+/* QUADRADO */
+.quadrado {
     text-align: center;
     justify-content: center;
     align-items: center;
     width: 40rem;
     height: 28rem;
     background-color: #c9c9c9;
-    margin-top: 1rem;
+    margin: 1rem auto 0 auto;
     border-radius: 15px;
+    display: flex;
 }
 
-.texto{
+.texto {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
+.texto h2 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
 
-.botao{
+/* BOTÃO */
+.botao {
     display: flex;
+    justify-content: center;
     margin-top: 2rem;
 }
 
-
-button{
+button {
     cursor: pointer;
     padding-inline: 9.9rem;
     padding-block: 12px;
@@ -65,24 +86,69 @@ button{
     font-size: 16px;
 }
 
-h2{
-
-    font-size: 30px;   
-}
-
-.title{
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-
+/* FOOTER */
 footer {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
 }
 
-.tamanhoImg{
+.tamanhoImg {
     width: 100vw;
     height: 23vh;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    header div {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    header h1 {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+    }
+
+    .quadrado {
+        width: 90%;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .texto h2 {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 12px 2rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .title h2 {
+        font-size: 1.5rem;
+    }
+
+    .tamanhoImg {
+        height: auto;
+        max-height: 20vh;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .texto h2 {
+        font-size: 0.95rem;
+        line-height: 1.6rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 12px 1rem;
+    }
 }

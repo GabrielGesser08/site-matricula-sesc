@@ -1,45 +1,104 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
+body {
+  background-color: #f9f9f9;
+}
+
+/* CABEÇALHO */
 .cabecalho {
   display: flex;
-  justify-content: center;
-  background-color: none;
-  margin-top: 8rem;
-}
-
-
-
-.separa {
-  margin-inline: 18rem;
-}
-
-.login{
-  margin-top: 3.5rem;
-  margin-left: 2rem;
-}
-
-div h2 {
   align-items: center;
-  display: inline;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.cabecalho h2 {
   font-size: 24px;
   font-weight: bold;
+}
+
+.cabecalho img {
+  width: 150px;
+  height: auto;
+}
+
+.cabecalho img {
+  width: 200px;
+  max-width: 80%;
+}
+
+/* LOGIN */
+.login {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
+/* FORMULÁRIO */
+.quadrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 950px;
+  background-color: #e0e0e0;
+  padding: 2rem;
+  margin: auto;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  margin: 1rem 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px rgb(191, 191, 191);
+}
+
+/* BOTÕES */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
-img {
-  width: 200px;
+nav button {
+  padding: 12px 3rem;
+  border: none;
+  box-shadow: 2px 2px rgb(191, 191, 191);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
-figure {
-  display: flex;
-  justify-content: center;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
+/* RODAPÉ */
 .rodape {
   display: flex;
   justify-content: center;
@@ -48,73 +107,61 @@ figure {
 
 .alterarTamanhoImg {
   width: 100%;
-  height: 10rem;
+  height: auto;
+  max-height: 10rem;
 }
 
+/* SECTION */
 section {
   margin-top: 2rem;
-  justify-content: center;
-  display: flex;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-
-nav button {
-  margin-inline: 2.1rem;
-  padding: 12px;
-  padding-inline: 10rem;
-  border: none;
-  box-shadow: 2px 2px rgb(191, 191, 191);
-  background-color: #fff;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 5px;
-  justify-content: center;
-  display: flex;
-}
-
-a {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: #000;
-}
-
-.quadrado {
-  align-items: center;
-  display: block;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-radius: 1rem;
-  width: 58rem;
-  height: 30rem;
-  background-color: #e0e0e0;
-}
-
-
-.form-container {
   display: flex;
   justify-content: center;
 }
 
-.form-group {
-  margin-inline: 10px;
-  justify-content: center;
-  margin-top: 2rem;
-  width: 48%; /* Ajuste conforme necessário */
+/* MEDIA QUERIES PARA MOBILE */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  nav button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .login {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .cabecalho h2 {
+    font-size: 1.8rem;
+  }
+
+  .quadrado {
+    height: auto;
+  }
 }
 
-input {
-  margin-left: 1.5rem;
-  padding: 16px;
-  width: 25rem;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 2px 2px rgb(191, 191, 191);
-}
+@media (max-width: 480px) {
+  .cabecalho h2 {
+    font-size: 1.5rem;
+  }
 
+  .login {
+    font-size: 1.3rem;
+  }
+
+  input {
+    padding: 14px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Lista de Alunos Sorteados</h1>
+        <header>
+            <h1 id="title">Lista de Alunos Sorteados</h1>
+            <img class="logo" src="../img/logoSescSenac.png" alt="">
+        </header>
         <table>
             <thead>
                 <tr>

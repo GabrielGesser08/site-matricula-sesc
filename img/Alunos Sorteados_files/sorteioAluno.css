@@ -69,19 +69,10 @@ body {
             display: flex;
             justify-content: center;
             margin-top: 5rem;
-            font-size: 32px;
-            text-decoration: none;
         }
 
         button{
-            font-size: 18px;
-            padding-block: 30px;
-            padding-inline: 90px;
+            padding: 30px;
             border: none;
             border-radius: 5px;
-        }
-
-        button:hover{
-            background-color: #ccc;
-            transition: .5s;
         }
