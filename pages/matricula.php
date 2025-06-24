@@ -65,14 +65,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-container">
           <div class="form-group">
             <input type="text" name="nome_completo" placeholder="Nome completo:" required>
-            <input type="text" name="cpf" placeholder="CPF:" required>
+            <input type="text" name="cpf" placeholder="CPF:" required maxlength="11">
             <input type="text" name="rg" placeholder="N° do RG ou certidão de nascimento:">
-            <input type="text" name="sus" placeholder="N° do cartão do SUS:">
+            <input type="text" name="sus" placeholder="N° do cartão do SUS:" maxlength="15">
           </div>
 
           <div class="form-group">
             <input type="date" name="data_nascimento" required>
-            <input type="text" name="sexo" placeholder="Sexo:" required>
+            <select type="text" name="sexo" placeholder="Sexo:" required="required">
+              <option value="">Sexo:</option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="naoBinario">Não Binário</option>
+              <option value="outro">Outro</option>
+            </select>
             <input type="text" name="nacionalidade" placeholder="Nacionalidade:" required>
           </div>
         </div>
@@ -92,5 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </footer>
 </body>
+
+  <script src="../js/filtroCpf.js"></script>
+  <script src="../js/filtroRg.js"></script>
+  <script src="../js/filtroSus.js"></script>
 
 </html>

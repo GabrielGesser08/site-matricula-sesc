@@ -46,6 +46,8 @@
                 alt="" />
         </div>
     </footer>
+
+    <script src="../js/filtroEmail.js"></script>
 </body>
 
 </html>

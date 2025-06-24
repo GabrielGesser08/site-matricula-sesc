@@ -34,7 +34,7 @@ if (!empty($_SESSION['mensagem'])) {
                     <input type="text" name="email" placeholder="Email:" required>
                     <input type="password" name="senha" placeholder="Senha:" required>
                     <input type="password" name="confirma_senha" placeholder="Confirmar senha:" required>
-                    <input type="text" name="cpf" placeholder="CPF:" required>
+                    <input type="text" name="cpf" placeholder="CPF:" required maxlength="11">
                 </div>
 
                 <div class="botoes">
@@ -49,6 +49,8 @@ if (!empty($_SESSION['mensagem'])) {
             <img class="tamanhoImg" src="../img/footer.png" alt="">
         </figure>
     </footer>
+    <script src="../js/filtroEmail.js"></script>
+    <script src="../js/filtroCpf.js"></script>
 </body>
 
 </html>
